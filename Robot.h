@@ -2,6 +2,10 @@
 #define DEF_ROBOT
 
 #include <string>
+#include "Position.h"
+#include "Plot.h"
+#include "Objet.h"
+#include "EtatRobot.h"
 
 class Robot {
 private:
