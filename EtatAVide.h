@@ -10,12 +10,16 @@ public:
 	static EtatAVide* Instance() { 
 		static EtatAVide _instance; return &_instance; 
 	};
-    virtual void avancer(int x, int y);
+    virtual EtatRobot* avancer(){
+		return EtatAVide::Instance();
+    };
 
-    virtual void tourner(std::string direction);
+    virtual EtatRobot* tourner(){
+		return EtatAVide::Instance();
+    };
 
-    virtual void rencontrerPlot(Plot p){
-		this = EtatAVideFacePlot::Instance();
+    virtual EtatRobot* rencontrerPlot(){
+		return EtatAVideFacePlot::Instance();
     };
 protected:
 	EtatAVide() {};

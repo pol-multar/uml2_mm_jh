@@ -10,14 +10,20 @@ public:
 		static EtatEnCharge _instance; return &_instance;
 	};
 
-    virtual void avancer(int x, int y);
+    virtual EtatRobot* avancer(int x, int y){
+    	return EtatEnCharge::Instance();
+    };
 
-    virtual void tourner(std::string direction);
+    virtual EtatRobot* tourner(std::string direction){
+    	return EtatEnCharge::Instance();
+    };
 
-    virtual int peser();
+    virtual EtatRobot* peser(){
+    	return EtatEnCharge::Instance();
+    };
 
-	virtual void rencontrerPlot(Plot p){
-		this = EtatEnChargeFacePlot::Instance();
+	virtual EtatRobot* rencontrerPlot(Plot p){
+		return EtatEnChargeFacePlot::Instance();
 	};
 
 protected:

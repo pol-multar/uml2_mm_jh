@@ -11,11 +11,17 @@ public:
 		static EtatEnChargeFacePlot _instance; return &_instance;
 	};
 
-    virtual void tourner(std::string direction);
+    virtual EtatRobot* tourner(std::string direction){
+		return EtatEnCharge::Instance();
+    };
 	
-	virtual void poser();
+	virtual EtatRobot* poser(){
+		return EtatAVideFacePlot::Instance();
+    };
 
-    virtual int peser();
+    virtual EtatRobot* peser(){
+		return EtatEnChargeFacePlot::Instance();
+    };
 
 protected:
 	EtatEnChargeFacePlot() {};

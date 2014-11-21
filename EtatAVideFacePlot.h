@@ -10,11 +10,17 @@ public:
 		static EtatAVideFacePlot _instance; return &_instance;
 	};
 
-	virtual void tourner(std::string direction);
+	virtual EtatRobot* tourner(){
+		return EtatAVide::Instance();
+    };
 
-    virtual void saisir(Objet obj);
+    virtual EtatRobot* saisir(){
+		return EtatEnChargeFacePlot::Instance();
+    };
 
-    virtual int evaluerPlot();
+    virtual EtatRobot* evaluerPlot(){
+		return EtatAVideFacePlot::Instance();
+    };
 
 protected:
 	EtatAVideFacePlot() {};

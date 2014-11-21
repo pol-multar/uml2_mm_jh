@@ -11,22 +11,36 @@
 class EtatEnRoute: public EtatRobot
 {
 public:
-	virtual void avancer(int x, int y);
+	virtual EtatRobot* avancer(){
+        throw ETATROBOT_EXCEPTION();
+    }:
 
-	virtual void tourner(std::string direction);
+	virtual EtatRobot* tourner(){
+        throw ETATROBOT_EXCEPTION();
+    }:
 
-	virtual void saisir(Objet obj);
+	virtual EtatRobot* saisir(){
+        throw ETATROBOT_EXCEPTION();
+    }:
 
-	virtual void poser();
+	virtual EtatRobot* poser(){
+        throw ETATROBOT_EXCEPTION();
+    }:
 
-	virtual int peser();
+	virtual EtatRobot* peser(){
+        throw ETATROBOT_EXCEPTION();
+    }:
 
-	virtual void rencontrerPlot(Plot p);
+	virtual EtatRobot* rencontrerPlot(){
+        throw ETATROBOT_EXCEPTION();
+    }:
 
-	virtual int evaluerPlot();
+	virtual EtatRobot* evaluerPlot(){
+        throw ETATROBOT_EXCEPTION();
+    }:
 
-    virtual void figer(){
-    	//TODO
+    virtual EtatRobot* figer(){
+    	return EtatFige::Instance(this);
     };
 };
 

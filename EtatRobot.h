@@ -5,26 +5,49 @@
 #include "Position.h"
 #include "Plot.h"
 #include "Objet.h"
+#include "EtatRobot.h"
 
 class EtatRobot{
 public:
-	virtual void avancer(int x, int y)=0;
+    class ETATROBOT_EXCEPTION: public std::exception{};
 
-    virtual void tourner(std::string direction)=0;
+	virtual EtatRobot* avancer(){
+        throw ETATROBOT_EXCEPTION();
+    }:
 
-    virtual void saisir(Objet obj)=0;
+    virtual EtatRobot* tourner(){
+        throw ETATROBOT_EXCEPTION();
+    }:
 
-    virtual void poser()=0;
+    virtual EtatRobot* saisir(){
+        throw ETATROBOT_EXCEPTION();
+    }:
 
-    virtual int peser()=0;
+    virtual EtatRobot* poser(){
+        throw ETATROBOT_EXCEPTION();
+    }:
 
-    virtual void rencontrerPlot(Plot p)=0;
+    virtual EtatRobot* peser(){
+        throw ETATROBOT_EXCEPTION();
+    }:
 
-    virtual int evaluerPlot()=0;
+    virtual EtatRobot* rencontrerPlot(){
+        throw ETATROBOT_EXCEPTION();
+    }:
 
-    virtual void figer()=0;
+    virtual EtatRobot* evaluerPlot(){
+        throw ETATROBOT_EXCEPTION();
+    }:
 
-    virtual void repartir();
+    virtual EtatRobot* figer(){
+        throw ETATROBOT_EXCEPTION();
+    };
+
+    virtual EtatRobot* repartir(){
+        throw ETATROBOT_EXCEPTION();
+    }:
+
+    
 };
 
 #endif
