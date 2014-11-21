@@ -13,31 +13,31 @@ public:
 
 	virtual EtatRobot* avancer(){
         throw ETATROBOT_EXCEPTION();
-    }:
+    };
 
     virtual EtatRobot* tourner(){
         throw ETATROBOT_EXCEPTION();
-    }:
+    };
 
     virtual EtatRobot* saisir(){
         throw ETATROBOT_EXCEPTION();
-    }:
+    };
 
     virtual EtatRobot* poser(){
         throw ETATROBOT_EXCEPTION();
-    }:
+    };
 
     virtual EtatRobot* peser(){
         throw ETATROBOT_EXCEPTION();
-    }:
+    };
 
     virtual EtatRobot* rencontrerPlot(){
         throw ETATROBOT_EXCEPTION();
-    }:
+    };
 
     virtual EtatRobot* evaluerPlot(){
         throw ETATROBOT_EXCEPTION();
-    }:
+    };
 
     virtual EtatRobot* figer(){
         throw ETATROBOT_EXCEPTION();
@@ -45,9 +45,9 @@ public:
 
     virtual EtatRobot* repartir(){
         throw ETATROBOT_EXCEPTION();
-    }:
+    };
 
-    
+
 };
 
 #endif

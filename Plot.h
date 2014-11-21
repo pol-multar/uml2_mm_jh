@@ -13,6 +13,10 @@ public:
     	return _hauteur;
     };
 
+    Plot operator=(Plot p){
+    	_hauteur = p.getHauteur();
+    	return *this;
+    };
 };
 
 #endif

@@ -13,6 +13,11 @@ public:
     	return poids;
     };
 
+    Objet operator=(Objet obj){
+    	poids = obj.getPoids();
+    	return *this;
+    };
+
 };
 
 #endif

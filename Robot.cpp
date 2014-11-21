@@ -12,26 +12,27 @@ void Robot::SetEtat(EtatRobot *etat) {
 }
 
 void Robot::avancer(int x, int y){
-	 etat =_etat->avancer();
+	_etat =_etat->avancer();
 	_position.setX(x);
 	_position.setY(y);
 };
 
 void Robot::tourner(std::string direction){
 	_etat=_etat->tourner();
+	Plot p;
 	_direction = direction;
-	_plot = NULL;
+	_plot = p;
 };
 
 void Robot::saisir(Objet obj){
 	_etat=_etat->avancer();
 	_obj = obj;
-
 };
 
 void Robot::poser(){
+	Objet obj;
 	_etat =_etat->poser();
-	_obj = NULL;
+	_obj = obj;
 };
 
 int Robot::peser(){
@@ -40,7 +41,7 @@ int Robot::peser(){
 };
 
 void Robot::rencontrerPlot(Plot p){
-	_etat=_etat->rencontrerPlot();
+	_etat =_etat->rencontrerPlot();
 	_plot = p;
 };
 
