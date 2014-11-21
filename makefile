@@ -6,7 +6,7 @@
 
 CXXFLAGS = -g -Wall -std=c++11
 CXX = g++
-CXX_COMPILE = $(CXX) $(CXXFLAGS) 
+CXX_COMPILE = $(CXX) $(CXXFLAGS)
 
 LIBS =
 CXX_LINK = $(CXX)
@@ -26,9 +26,14 @@ tst_Robot : main_Robot.o Robot.o
 
 
 
+
+
+
+
 #-----------------------------------------------------------------------
 # Local dependencies
 #-----------------------------------------------------------------------
 
 Robot.o : Robot.h EtatRobot.h Objet.h Plot.h Position.h EtatAVide.h EtatEnCharge.h EtatAVideFacePlot.h EtatEnCharge.h EtatEnChargeFacePlot.h EtatEnRoute.h EtatFige.h common_defs.h
 main_Robot.o : Robot.h EtatRobot.h Objet.h Plot.h Position.h EtatAVide.h EtatEnCharge.h EtatAVideFacePlot.h EtatEnCharge.h EtatEnChargeFacePlot.h EtatEnRoute.h EtatFige.h common_defs.h
+Observable.o : Observable.h IObserver.h
