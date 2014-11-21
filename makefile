@@ -24,6 +24,9 @@ CXX_LINK = $(CXX)
 tst_Robot : main_Robot.o Robot.o
 	$(CXX_LINK) -o tst_Robot main_Robot.o Robot.o
 
+tst : main_exemple.o Observable.o
+	$(CXX_LINK) -o tst main_exemple.o Observable.o
+
 
 
 
@@ -37,3 +40,4 @@ tst_Robot : main_Robot.o Robot.o
 Robot.o : Robot.h EtatRobot.h Objet.h Plot.h Position.h EtatAVide.h EtatEnCharge.h EtatAVideFacePlot.h EtatEnCharge.h EtatEnChargeFacePlot.h EtatEnRoute.h EtatFige.h common_defs.h
 main_Robot.o : Robot.h EtatRobot.h Objet.h Plot.h Position.h EtatAVide.h EtatEnCharge.h EtatAVideFacePlot.h EtatEnCharge.h EtatEnChargeFacePlot.h EtatEnRoute.h EtatFige.h common_defs.h
 Observable.o : Observable.h IObserver.h
+main_exemple.o : Display.h Exemple.h common_defs.h
