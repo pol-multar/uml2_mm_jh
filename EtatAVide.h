@@ -7,20 +7,13 @@ class EtatAVide: public EtatEnRoute
 {
 
 public:
-	static EtatAVide* Instance() { 
-		static EtatAVide _instance; return &_instance; 
-	};
-    virtual EtatRobot* avancer(){
-		return EtatAVide::Instance();
-    };
+	static EtatAVide* Instance();
 
-    virtual EtatRobot* tourner(){
-		return EtatAVide::Instance();
-    };
+    virtual EtatRobot* avancer();
 
-    virtual EtatRobot* rencontrerPlot(){
-		return EtatAVideFacePlot::Instance();
-    };
+    virtual EtatRobot* tourner();
+
+    virtual EtatRobot* rencontrerPlot();
 protected:
 	EtatAVide() {};
 private:

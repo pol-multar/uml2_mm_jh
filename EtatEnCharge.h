@@ -6,25 +6,15 @@
 class EtatEnCharge: public EtatEnRoute
 {
 public:
-	static EtatEnCharge* Instance() {
-		static EtatEnCharge _instance; return &_instance;
-	};
+	static EtatEnCharge* Instance() ;
 
-    virtual EtatRobot* avancer(int x, int y){
-    	return EtatEnCharge::Instance();
-    };
+    virtual EtatRobot* avancer();
 
-    virtual EtatRobot* tourner(std::string direction){
-    	return EtatEnCharge::Instance();
-    };
+    virtual EtatRobot* tourner();
 
-    virtual EtatRobot* peser(){
-    	return EtatEnCharge::Instance();
-    };
+    virtual EtatRobot* peser();
 
-	virtual EtatRobot* rencontrerPlot(Plot p){
-		return EtatEnChargeFacePlot::Instance();
-	};
+	virtual EtatRobot* rencontrerPlot();
 
 protected:
 	EtatEnCharge() {};

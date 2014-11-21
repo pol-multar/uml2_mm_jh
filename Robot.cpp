@@ -1,9 +1,9 @@
 #include <string>
-#include "Position.h"
-#include "Plot.h"
-#include "Objet.h"
-#include "EtatRobot.h"
 #include "Robot.h"
+#include "EtatRobot.h"
+#include "Objet.h"
+#include "Plot.h"
+#include "Position.h"
 
 Robot::Robot(EtatRobot *etat): _etat(etat) {};
 

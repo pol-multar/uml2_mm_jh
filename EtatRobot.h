@@ -2,50 +2,28 @@
 #define DEF_ETATROB
 
 #include <string>
-#include "Position.h"
-#include "Plot.h"
-#include "Objet.h"
-#include "EtatRobot.h"
 
 class EtatRobot{
 public:
     class ETATROBOT_EXCEPTION: public std::exception{};
 
-	virtual EtatRobot* avancer(){
-        throw ETATROBOT_EXCEPTION();
-    };
+	virtual EtatRobot* avancer();
 
-    virtual EtatRobot* tourner(){
-        throw ETATROBOT_EXCEPTION();
-    };
+    virtual EtatRobot* tourner();
 
-    virtual EtatRobot* saisir(){
-        throw ETATROBOT_EXCEPTION();
-    };
+    virtual EtatRobot* saisir();
 
-    virtual EtatRobot* poser(){
-        throw ETATROBOT_EXCEPTION();
-    };
+    virtual EtatRobot* poser();
 
-    virtual EtatRobot* peser(){
-        throw ETATROBOT_EXCEPTION();
-    };
+    virtual EtatRobot* peser();
 
-    virtual EtatRobot* rencontrerPlot(){
-        throw ETATROBOT_EXCEPTION();
-    };
+    virtual EtatRobot* rencontrerPlot();
 
-    virtual EtatRobot* evaluerPlot(){
-        throw ETATROBOT_EXCEPTION();
-    };
+    virtual EtatRobot* evaluerPlot();
 
-    virtual EtatRobot* figer(){
-        throw ETATROBOT_EXCEPTION();
-    };
+    virtual EtatRobot* figer();
 
-    virtual EtatRobot* repartir(){
-        throw ETATROBOT_EXCEPTION();
-    };
+    virtual EtatRobot* repartir();
 
 
 };

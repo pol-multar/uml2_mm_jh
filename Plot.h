@@ -9,14 +9,9 @@ private:
 
 public:
 
-    int getHauteur(){
-    	return _hauteur;
-    };
+	int getHauteur();
 
-    Plot operator=(Plot p){
-    	_hauteur = p.getHauteur();
-    	return *this;
-    };
+    Plot operator=(Plot p);
 };
 
 #endif

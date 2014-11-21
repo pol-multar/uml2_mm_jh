@@ -3,22 +3,16 @@
 
 #include "EtatRobot.h"
 
-class EtatFige: virtual public EtatRobot
+class EtatFige:public EtatRobot
 {
 public:
-	static EtatFige* Instance(EtatRobot* etat) {
-		_etatDernier = etat;
-		static EtatFige _instance;
-		return &_instance;
-	};
+	static EtatFige* Instance(EtatRobot* etat);
 
-	virtual EtatRobot* repartir(){
-		return _etatDernier;
-	};
+	virtual EtatRobot* repartir();
 protected:
 	EtatFige() {};
 private:
-	EtatRobot* _etatDernier;
+	static EtatRobot* _etatDernier;
 	EtatFige(const EtatFige&);
 	EtatFige& operator=(const EtatFige&);
 	};

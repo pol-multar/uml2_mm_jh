@@ -7,21 +7,13 @@
 class EtatEnChargeFacePlot: public EtatEnRoute
 {
 public:
-	static EtatEnChargeFacePlot* Instance() {
-		static EtatEnChargeFacePlot _instance; return &_instance;
-	};
+	static EtatEnChargeFacePlot* Instance();
 
-    virtual EtatRobot* tourner(std::string direction){
-		return EtatEnCharge::Instance();
-    };
+    virtual EtatRobot* tourner(std::string direction);
 	
-	virtual EtatRobot* poser(){
-		return EtatAVideFacePlot::Instance();
-    };
+	virtual EtatRobot* poser();
 
-    virtual EtatRobot* peser(){
-		return EtatEnChargeFacePlot::Instance();
-    };
+    virtual EtatRobot* peser();
 
 protected:
 	EtatEnChargeFacePlot() {};

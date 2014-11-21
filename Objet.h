@@ -9,14 +9,9 @@ private:
 
 public:
 
-    int getPoids(){
-    	return poids;
-    };
+    int getPoids();
 
-    Objet operator=(Objet obj){
-    	poids = obj.getPoids();
-    	return *this;
-    };
+    Objet operator=(Objet obj);
 
 };
 

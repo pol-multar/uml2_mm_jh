@@ -1,7 +1,13 @@
 #include "Robot.h"
+#include "EtatRobot.h"
+#include "EtatAVide.h"
+#include "EtatAVideFacePlot.h"
+#include "EtatEnCharge.h"
+#include "EtatEnChargeFacePlot.h"
+#include <iostream>
 
 int main(){
-	EtatAVide etatcommencer = new EtatAVide();
-	Robot robot = new Robot(etatcommencer);
+	EtatRobot* etatcommencer = EtatAVide::Instance();
+	Robot robot(etatcommencer);
     return 0;
 }
