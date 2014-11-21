@@ -1,9 +1,5 @@
 #include <string>
 #include "Robot.h"
-#include "EtatRobot.h"
-#include "Objet.h"
-#include "Plot.h"
-#include "Position.h"
 
 Robot::Robot(EtatRobot *etat): _etat(etat) {};
 
@@ -18,10 +14,16 @@ void Robot::avancer(int x, int y){
 };
 
 void Robot::tourner(std::string direction){
-	_etat=_etat->tourner();
-	Plot p;
-	_direction = direction;
-	_plot = p;
+	if (direction == "EAST" || direction == "WEST" || direction == "SOUTH" || direction == "NORTH"){
+		_etat = _etat->tourner();
+		Plot p;
+		_direction = direction;
+		_plot = p;
+	}
+	else
+	{
+		throw EtatRobot::ETATROBOT_EXCEPTION();
+	}
 };
 
 void Robot::saisir(Objet obj){
@@ -51,11 +53,13 @@ int Robot::evaluerPlot(){
 };
 
 void Robot::figer(){
+	_etatHistorique = _etat;
 	_etat=_etat->figer();
 };
 
 void Robot::repartir(){
 	_etat=_etat->repartir();
+	_etat = _etatHistorique;
 };
 
 void Robot::afficher(){

@@ -1,5 +1,7 @@
 #include "Plot.h"
 
+Plot::Plot(int h) :_hauteur(h) {};
+
 int Plot::getHauteur(){
 	return _hauteur;
 };

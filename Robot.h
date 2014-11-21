@@ -2,6 +2,10 @@
 #define DEF_ROBOT
 
 #include <string>
+#include "EtatRobot.h"
+#include "Objet.h"
+#include "Plot.h"
+#include "Position.h"
 
 class Robot {
 private:
@@ -10,6 +14,7 @@ private:
     Plot _plot;
     Objet _obj;
     EtatRobot *_etat;
+	EtatRobot *_etatHistorique;
 
 public:
     Robot(EtatRobot *etat);

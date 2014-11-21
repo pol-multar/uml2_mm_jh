@@ -8,6 +8,7 @@ private:
 
 
 public:
+	Plot(int h = 0);
 
 	int getHauteur();
 

@@ -8,7 +8,7 @@ private:
 
 
 public:
-
+	Objet(int p=0);
     int getPoids();
 
     Objet operator=(Objet obj);

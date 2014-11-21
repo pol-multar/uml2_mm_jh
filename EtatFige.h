@@ -6,16 +6,17 @@
 class EtatFige:public EtatRobot
 {
 public:
-	static EtatFige* Instance(EtatRobot* etat);
+	void setHistorique(EtatRobot* etat);
+
+	static EtatFige* Instance();
 
 	virtual EtatRobot* repartir();
 protected:
 	EtatFige() {};
 private:
-	static EtatRobot* _etatDernier;
+	EtatRobot* _etatDernier;
 	EtatFige(const EtatFige&);
 	EtatFige& operator=(const EtatFige&);
-	};
 };
 
 

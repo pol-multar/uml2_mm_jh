@@ -1,5 +1,7 @@
 #include "Position.h"
 
+Position::Position(int X, int Y) : x(X), y(Y) {};
+
 void Position::setX(int nX){
 	x = nX;
 };

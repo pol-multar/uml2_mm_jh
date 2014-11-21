@@ -6,21 +6,13 @@
 class EtatAVideFacePlot: public EtatEnRoute
 {
 public:
-	static EtatAVideFacePlot* Instance() {
-		static EtatAVideFacePlot _instance; return &_instance;
-	};
+	static EtatAVideFacePlot* Instance();
 
-	virtual EtatRobot* tourner(){
-		return EtatAVide::Instance();
-    };
+	virtual EtatRobot* tourner();
 
-    virtual EtatRobot* saisir(){
-		return EtatEnChargeFacePlot::Instance();
-    };
+    virtual EtatRobot* saisir();
 
-    virtual EtatRobot* evaluerPlot(){
-		return EtatAVideFacePlot::Instance();
-    };
+    virtual EtatRobot* evaluerPlot();
 
 protected:
 	EtatAVideFacePlot() {};

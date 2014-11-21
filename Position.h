@@ -8,6 +8,7 @@ private:
     int y;
 
 public:
+	Position(int X=0, int Y=0);
 
     void setX(int nX);
 

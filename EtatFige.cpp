@@ -1,7 +1,10 @@
 #include "EtatFige.h"
 
-EtatFige* EtatFige::Instance(EtatRobot* etat) {
+void EtatFige::setHistorique(EtatRobot* etat){
 	_etatDernier = etat;
+};
+
+EtatFige* EtatFige::Instance() {
 	static EtatFige _instance;
 	return &_instance;
 };
