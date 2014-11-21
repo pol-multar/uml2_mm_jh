@@ -13,12 +13,12 @@ SOLUTION_FILES = $(SOURCES)
 
 #targets
 
-tst_Date : main_Robot.o Robot.o
+tst_Robot : main_Robot.o Robot.o
 	$(CXX_LINK) -o tst_Robot main_Robot.o Robot.o
 
 #-----------------------------------------------------------------------
 # Local dependencies
 #-----------------------------------------------------------------------
 
-Robot.o : Robot.h EtatRobot.h Objet.h Plot.h Position.h $(INCL_DIR)/common_defs.h
+Robot.o : Robot.h EtatRobot.h Objet.h Plot.h Position.h EtatAVide.h EtatEnCharge EtatAVideFacePlot.h EtatEnCharge.h EtatEnChargeFacePlot.h EtatEnRoute.h EtatFige.h $(INCL_DIR)/common_defs.h
 main_Robot.o : Robot.h EtatRobot.h Objet.h Plot.h Position.h $(INCL_DIR)/common_defs.h
