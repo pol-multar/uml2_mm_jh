@@ -13,9 +13,12 @@ private:
     Position _position;
     Plot _plot;
     Objet _obj;
-    EtatRobot _etat;
+    EtatRobot *_etat;
 
 public:
+    Robot(EtatRobot *etat);
+
+    void SetEtat(EtatRobot *etat);
 
     void avancer(int x, int y);
 

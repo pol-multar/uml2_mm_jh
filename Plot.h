@@ -9,7 +9,9 @@ private:
 
 public:
 
-    int getHauteur();
+    int getHauteur(){
+    	return hauteur;
+    };
 
 };
 

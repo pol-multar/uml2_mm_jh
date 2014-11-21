@@ -9,12 +9,20 @@ private:
 
 public:
 
-    void setX(int nX);
+    void setX(int nX){
+    	x = nX;
+    };
 
-    void setY(int nY);
+    void setY(int nY){
+    	y = nY;
+    };
 
-    int getX;
-    int getY;
+    int getX(){
+    	return x;
+    };
+    int getY(){
+    	return y;
+    };
 
 };
 

@@ -9,7 +9,9 @@ private:
 
 public:
 
-    int getPoids();
+    int getPoids(){
+    	return poids;
+    };
 
 };
 
