@@ -4,21 +4,36 @@
 # Maxime MULTARI & Hong JIN --- Copyright 2014
 #=======================================================================
 
-include default.mk
+CXXFLAGS = -g -Wall -std=c++11
+CXX = g++
+CXX_COMPILE = $(CXX) $(CXXFLAGS)
 
-# Variables needed by default.mk
+LIBS =
+CXX_LINK = $(CXX)
 
-INITIAL_FILES = $(SOURCES)
-SOLUTION_FILES = $(SOURCES)
+# Default rules
+
+%.o :	%.cpp
+	$(CXX_COMPILE) -c $*.cpp
+
+% :	%.cpp
+	$(CXX_COMPILE) -o $@ -c $*.cpp
 
 #targets
 
-tst_Date : main_Robot.o Robot.o
+tst_Robot : main_Robot.o Robot.o
 	$(CXX_LINK) -o tst_Robot main_Robot.o Robot.o
+
+
+
+
+
+
 
 #-----------------------------------------------------------------------
 # Local dependencies
 #-----------------------------------------------------------------------
 
-Robot.o : Robot.h EtatRobot.h Objet.h Plot.h Position.h $(INCL_DIR)/common_defs.h
-main_Robot.o : Robot.h EtatRobot.h Objet.h Plot.h Position.h $(INCL_DIR)/common_defs.h
+Robot.o : Robot.h EtatRobot.h Objet.h Plot.h Position.h EtatAVide.h EtatEnCharge.h EtatAVideFacePlot.h EtatEnCharge.h EtatEnChargeFacePlot.h EtatEnRoute.h EtatFige.h common_defs.h
+main_Robot.o : Robot.h EtatRobot.h Objet.h Plot.h Position.h EtatAVide.h EtatEnCharge.h EtatAVideFacePlot.h EtatEnCharge.h EtatEnChargeFacePlot.h EtatEnRoute.h EtatFige.h common_defs.h
+Observable.o : Observable.h IObserver.h

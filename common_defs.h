@@ -5,7 +5,7 @@
 // $Id: common_defs.h,v 1.5 2008/09/20 10:46:05 jpr Exp $
 //=======================================================================
 
-/*!
+/*! 
  * \file common_defs.h
  *
  * \brief Common definitions for test programs.
@@ -51,11 +51,11 @@ using namespace std;
  *
  * \param msg the message to print
  */
-#define MSG(msg) cout << "\n********* "#msg" *********\n" << endl;
+#define MSG(msg) cout << "\n********* "#msg" *********\n" << endl; 
 
 /*!
  * \brief Terminate the program.
- *
+ * 
  * If running in a Windows Console, we need to pause, asking for some
  * character, in order that the window remains visible. As it is not so easy to
  * differentiate running Cygwin in line mode or through Dev-C++ or Visual
@@ -64,7 +64,7 @@ using namespace std;
  *
  * \param retcode the code the program returns to its parent
  */
-inline void pause_terminate(int retcode = 0)
+inline void pause_terminate(int retcode = 0) 
 {
     system("PAUSE");
     exit(retcode);

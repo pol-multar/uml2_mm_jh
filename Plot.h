@@ -4,13 +4,13 @@
 class Plot {
 
 private:
-    int hauteur;
+    int _hauteur;
 
 
 public:
 
     int getHauteur(){
-    	return hauteur;
+    	return _hauteur;
     };
 
 };
