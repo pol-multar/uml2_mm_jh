@@ -1,3 +1,5 @@
+#ifndef DEF_OBSERVABLE
+#define DEF_OBSERVABLE
 #include <set>
 #include <string>
 
@@ -14,3 +16,5 @@ public:
     void removeObserver(IObserver* observer);
 
 };
+
+#endif

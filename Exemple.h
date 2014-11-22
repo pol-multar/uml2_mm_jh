@@ -1,3 +1,5 @@
+#ifndef DEF_EXAMPLE
+#define DEF_EXAMPLE
 #include "Observable.h"
 #include <string>
 
@@ -8,3 +10,5 @@ public:
         notify(message);
     }
 };
+
+#endif
