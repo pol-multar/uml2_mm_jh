@@ -53,13 +53,11 @@ int Robot::evaluerPlot(){
 };
 
 void Robot::figer(){
-	_etatHistorique = _etat;
 	_etat=_etat->figer();
 };
 
 void Robot::repartir(){
 	_etat=_etat->repartir();
-	_etat = _etatHistorique;
 };
 
 void Robot::afficher(){

@@ -27,7 +27,7 @@ void Robot::tourner(std::string direction){
 };
 
 void Robot::saisir(Objet obj){
-	_etat=_etat->avancer();
+	_etat=_etat->saisir();
 	_obj = obj;
 };
 
