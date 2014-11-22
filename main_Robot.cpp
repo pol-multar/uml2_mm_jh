@@ -3,6 +3,7 @@
 #include "EtatAVideFacePlot.h"
 #include "EtatEnCharge.h"
 #include "EtatEnChargeFacePlot.h"
+#include "Plot.h"
 #include <iostream>
 using namespace std;
 
