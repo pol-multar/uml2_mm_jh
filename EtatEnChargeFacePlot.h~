@@ -9,7 +9,7 @@ class EtatEnChargeFacePlot: public EtatEnRoute
 public:
 	static EtatEnChargeFacePlot* Instance();
 
-    virtual EtatRobot* tourner();
+    virtual EtatRobot* tourner(std::string direction);
 	
 	virtual EtatRobot* poser();
 

@@ -6,7 +6,7 @@ EtatEnChargeFacePlot* EtatEnChargeFacePlot::Instance() {
 	static EtatEnChargeFacePlot _instance; return &_instance;
 };
 
-EtatRobot* EtatEnChargeFacePlot::tourner(){
+EtatRobot* EtatEnChargeFacePlot::tourner(std::string direction){
 	return EtatEnCharge::Instance();
 };
 
