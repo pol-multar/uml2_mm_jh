@@ -49,15 +49,22 @@ int main(){
 		cerr<<"Rien à saisir."<<endl;
 	}
 	robot.rencontrerPlot(p1);
+	cout<<"maintenant je suis dans l'EtatAVideFacePlot."<<endl;
 	robot.evaluerPlot();
 	robot.saisir(obj1);
+	cout<<"maintenant je suis dans l'EtatEnChargeFacePlot."<<endl;
 	robot.peser();
 	robot.tourner("WEST");
+	cout<<"maintenant je suis dans l'EtatEnCharge."<<endl;
 	robot.avancer(2, 4);
 	robot.rencontrerPlot(p2);
+	cout<<"maintenant je suis dans l'EtatEnChargeFacePlot."<<endl;
 	robot.poser();
+	cout<<"maintenant je suis dans l'EtatAVideFacePlot."<<endl;
 	robot.figer();
+	cout<<"maintenant je suis dans l'EtatFige."<<endl;
 	robot.repartir();
+	cout<<"maintenant je suis dans l'EtatAVideFacePlot."<<endl;
 	robot.tourner("SOUTH");
 	
 	return 0;
