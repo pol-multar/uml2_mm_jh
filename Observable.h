@@ -3,17 +3,23 @@
 #include <set>
 #include <string>
 
+class IObserver;
+
 class Observable
 {
 private:
     std::set<IObserver*> _list_observers;
 
 public:
-    void notify(std::string data) const;
+    virtual ~Observable();
 
     void addObserver(IObserver* observer);
 
     void removeObserver(IObserver* observer);
+
+    virtual std::string statut(void) =0;
+
+    void notify(void);
 
 };
 
