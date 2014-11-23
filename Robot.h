@@ -6,8 +6,9 @@
 #include "Objet.h"
 #include "Plot.h"
 #include "Position.h"
+#include "Observable.h"
 
-class Robot {
+class Robot : public Observable {
 private:
     std::string _direction;
     Position _position;
@@ -15,6 +16,8 @@ private:
     Objet _obj;
     EtatRobot *_etat;
 	EtatRobot *_etatHistorique;
+    std::string _ordre;
+    bool _estFig= false;
 
 public:
     Robot(EtatRobot *etat);
@@ -40,6 +43,8 @@ public:
     void repartir();
 
     void afficher();
+
+    std::string statut() ;
 
 };
 

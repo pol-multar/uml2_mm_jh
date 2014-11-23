@@ -4,6 +4,7 @@
 #include "EtatEnCharge.h"
 #include "EtatEnChargeFacePlot.h"
 #include <iostream>
+#include "Display.h"
 using namespace std;
 
 
@@ -14,8 +15,12 @@ int main(){
 	Objet obj1(10);
 	Objet obj2(20);
 	Objet obj3(30);
+
+    Display display;
+
 	EtatRobot* etatcommencer = EtatAVide::Instance();
 	Robot robot(etatcommencer);
+    robot.addObserver(&display);
 	robot.avancer(5, 5);
 	robot.tourner("EAST");
 	try{

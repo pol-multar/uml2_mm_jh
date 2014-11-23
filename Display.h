@@ -6,10 +6,7 @@
 
 class Display : public IObserver
 {
-void update(std::string data){
-    OUT("Evenement");
-    OUT(data);
-}
+
 };
 
 #endif
