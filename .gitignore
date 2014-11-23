@@ -48,3 +48,5 @@ target/
 CMakeLists.txt
 tst
 *~
+tst_Ex
+tst_Robot
