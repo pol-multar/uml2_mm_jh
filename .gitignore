@@ -47,3 +47,4 @@ target/
 
 CMakeLists.txt
 tst
+*~
