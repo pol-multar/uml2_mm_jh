@@ -18,7 +18,7 @@ int main(){
 
     Display display;
 
-	EtatRobot* etatcommencer = EtatAVide::Instance();
+	EtatRobot* etatcommencer = EtatRobot::getInit();
 	Robot robot(etatcommencer);
     robot.addObserver(&display);
 	robot.avancer(5, 5);

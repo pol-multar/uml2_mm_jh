@@ -1,4 +1,9 @@
 #include "EtatRobot.h"
+#include "EtatAVide.h"
+
+EtatRobot* EtatRobot::getInit() {
+    return EtatAVide::Instance();
+}
 
 EtatRobot* EtatRobot::avancer(){
 	throw ETATROBOT_EXCEPTION();

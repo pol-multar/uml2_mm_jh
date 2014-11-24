@@ -3,9 +3,12 @@
 
 #include <string>
 
+
 class EtatRobot{
 public:
     class ETATROBOT_EXCEPTION: public std::exception{};
+
+    static EtatRobot* getInit();
 
 	virtual EtatRobot* avancer();
 

@@ -34,7 +34,7 @@ EtatEnCharge.o : EtatEnCharge.h EtatEnChargeFacePlot.h
 EtatEnChargeFacePlot.o : EtatEnChargeFacePlot.h EtatAVideFacePlot.h EtatEnCharge.h
 EtatEnRoute.o : EtatEnRoute.h EtatFige.h
 EtatFige.o : EtatFige.h
-EtatRobot.o : EtatRobot.h
+EtatRobot.o : EtatRobot.h EtatAVide.h
 Objet.o : Objet.h
 Plot.o : Plot.h
 Position.o : Position.h
