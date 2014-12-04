@@ -1,6 +1,8 @@
 #ifndef DEF_COMMANDE
 #define DEF_COMMANDE
 
+#include <string>
+
 class Commande{
 
 public:
@@ -8,7 +10,7 @@ public:
     static Commande* nouvelleCommande(string c);
 
 protected:
-    Commande(string c);
+    Commande(std::string c);
     virtual Commande* constructeurVirtuel()=0;
 
 };
