@@ -2,12 +2,13 @@
 #define DEF_COMMANDE
 
 #include <string>
+#include <map>
 
 class Commande{
 
 public:
-    static map<string,Commande*>& commandesInscrites();
-    static Commande* nouvelleCommande(string c);
+    static std::map<std::string,Commande*>& commandesInscrites();
+    static Commande* nouvelleCommande(std::string c);
 
 protected:
     Commande(std::string c);
