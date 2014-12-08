@@ -12,8 +12,8 @@ ALL = tst_Robot
 
 #targets
 
-tst_Robot : main_Robot.o Robot.o EtatAVide.o EtatAVideFacePlot.o EtatEnCharge.o EtatEnChargeFacePlot.o EtatEnRoute.o EtatFige.o EtatRobot.o Objet.o Plot.o Position.o Observable.o IObserver.o
-	$(CXX_LINK) -o tst_Robot main_Robot.o Robot.o EtatAVide.o EtatAVideFacePlot.o EtatEnCharge.o EtatEnChargeFacePlot.o EtatEnRoute.o EtatFige.o EtatRobot.o Objet.o Plot.o Position.o Observable.o IObserver.o
+tst_Robot : main_Robot.o Robot.o EtatAVide.o EtatAVideFacePlot.o EtatEnCharge.o EtatEnChargeFacePlot.o EtatEnRoute.o EtatFige.o EtatRobot.o Objet.o Plot.o Position.o Observable.o IObserver.o Commande.o
+	$(CXX_LINK) -o tst_Robot main_Robot.o Robot.o EtatAVide.o EtatAVideFacePlot.o EtatEnCharge.o EtatEnChargeFacePlot.o EtatEnRoute.o EtatFige.o EtatRobot.o Objet.o Plot.o Position.o Observable.o IObserver.o Commande.o
 
 
 #-----------------------------------------------------------------------
@@ -34,3 +34,4 @@ EtatRobot.o : EtatRobot.h EtatAVide.h
 Objet.o : Objet.h
 Plot.o : Plot.h
 Position.o : Position.h
+Commande.o : Commande.h Invocateur.h
