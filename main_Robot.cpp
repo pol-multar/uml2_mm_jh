@@ -5,11 +5,22 @@
 #include "EtatEnChargeFacePlot.h"
 #include <iostream>
 #include "Display.h"
+#include "Invocateur.h"
 using namespace std;
 
 
 int main(){
-	Plot p1(10);
+	EtatRobot* etatcommencer = EtatRobot::getInit();
+	Robot robot(etatcommencer);
+
+	while (true)
+	{
+		Invocateur inv;
+		string commande = inv.getCommande();
+		inv.run(commande, &robot);
+	}
+
+	/*Plot p1(10);
 	Plot p2(15);
 	Plot p3(20);
 	Objet obj1(10);
@@ -71,6 +82,6 @@ int main(){
 	robot.repartir();
 	cout<<"maintenant je suis dans l'EtatAVideFacePlot."<<endl;
 	robot.tourner("SOUTH");
-	
+	*/
 	return 0;
 }

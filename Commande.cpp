@@ -1,6 +1,5 @@
 #include "Commande.h"
-#include <string>
-#include <map>
+
 
 using namespace std;
 
@@ -9,12 +8,18 @@ map<string,Commande*>& Commande::commandesInscrites() {
     return *comInscrites;
 }
 
-Commande* Commande::nouvelleCommande(string c) {
-
-        return commandesInscrites()[c]->constructeurVirtuel();
+Commande* Commande::nouvelleCommande(string c,Invocateur* inv) {
+	if (commandesInscrites().find(c) == commandesInscrites().end())
+	{
+		throw Commande::Unvalid_Commande_Exception();
+	}
+	return commandesInscrites()[c]->constructeurVirtuel(inv);
 
 }
 
 Commande::Commande(string c) {
     commandesInscrites()[c]=this;
+}
+
+Commande::Commande(Robot* r): robot(r) {
 }

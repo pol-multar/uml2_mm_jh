@@ -6,6 +6,27 @@ using namespace std;
 CommandeEvaluerObst CommandeEvaluerObst::monExemplaire("EVALUEROBST");
 
 
-Commande* CommandeEvaluerObst::constructeurVirtuel() {
-    return new CommandeEvaluerObst();
+CommandeEvaluerObst::CommandeEvaluerObst(Invocateur* inv) :Commande(inv->getRobot()){
+};
+
+Commande* CommandeEvaluerObst::constructeurVirtuel(Invocateur* inv) {
+	return new CommandeEvaluerObst(inv);
+}
+
+void CommandeEvaluerObst::execute() {
+	sauvRobot = robot;
+	sauv = true;
+	robot->evaluerPlot();
+}
+
+bool CommandeEvaluerObst::reversible() {
+	if (sauv)
+		return true;
+	return false;
+}
+
+void CommandeEvaluerObst::desexecute() {
+	if (CommandeEvaluerObst::reversible()){
+		robot = sauvRobot;
+	}
 }

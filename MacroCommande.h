@@ -1,21 +1,23 @@
-#ifndef DEF_POSER
-#define DEF_POSER
+#ifndef DEF_MACROCOMMANDE
+#define DEF_MACROCOMMANDE
 
 #include "Commande.h"
 #include <string>
 #include "Invocateur.h"
 #include "Robot.h"
 
-class CommandePoser : public Commande{
+class MacroCommande : public Commande{
 protected:
 	bool sauv = false;
 	Robot* sauvRobot;
+	Invocateur* invocateur;
+	static list<string> commands;
+	static string FIN_MARCO;
 public:
-     static CommandePoser monExemplaire;
+	static MacroCommande monExemplaire;
 
-    CommandePoser(std::string cp):Commande(cp){};
-	CommandePoser(Invocateur* inv);
-    CommandePoser():Commande("POSER"){};
+	MacroCommande(std::string cp) :Commande(cp){};
+	MacroCommande(Invocateur* inv);
 	Commande* constructeurVirtuel(Invocateur* inv);
 	virtual void execute(void);
 	virtual void desexecute(void);
