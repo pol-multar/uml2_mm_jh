@@ -12,8 +12,8 @@ ALL = tst_Robot
 
 #targets
 
-tst_Robot : main_Robot.o Robot.o EtatAVide.o EtatAVideFacePlot.o EtatEnCharge.o EtatEnChargeFacePlot.o EtatEnRoute.o EtatFige.o EtatRobot.o Objet.o Plot.o Position.o Observable.o IObserver.o Commande.o Invocateur.o CommandeAvancer.o
-	$(CXX_LINK) -o tst_Robot main_Robot.o Robot.o EtatAVide.o EtatAVideFacePlot.o EtatEnCharge.o EtatEnChargeFacePlot.o EtatEnRoute.o EtatFige.o EtatRobot.o Objet.o Plot.o Position.o Observable.o IObserver.o Commande.o Invocateur.o CommandeAvancer.o
+tst_Robot : main_Robot.o Robot.o EtatAVide.o EtatAVideFacePlot.o EtatEnCharge.o EtatEnChargeFacePlot.o EtatEnRoute.o EtatFige.o EtatRobot.o Objet.o Plot.o Position.o Observable.o IObserver.o Commande.o Invocateur.o CommandeAvancer.o MacroCommande.o CommandeAppeler.o CommandeDefmacro.o CommandeEvaluerObst.o CommandeFiger.o CommandePeserObjet.o CommandePoser.o CommandeRencontrerObst.o CommandeRepartir.o CommandeSaisir.o CommandeTourner.o
+	$(CXX_LINK) -o tst_Robot main_Robot.o Robot.o EtatAVide.o EtatAVideFacePlot.o EtatEnCharge.o EtatEnChargeFacePlot.o EtatEnRoute.o EtatFige.o EtatRobot.o Objet.o Plot.o Position.o Observable.o IObserver.o Commande.o Invocateur.o CommandeAvancer.o MacroCommande.o CommandeAppeler.o CommandeDefmacro.o CommandeEvaluerObst.o CommandeFiger.o CommandePeserObjet.o CommandePoser.o CommandeRencontrerObst.o CommandeRepartir.o CommandeSaisir.o CommandeTourner.o
 
 
 #-----------------------------------------------------------------------
@@ -39,3 +39,12 @@ Commande.o : Commande.h Invocateur.h
 CommandeAppeler.o : CommandeAppeler.h MacroCommande.h Invocateur.h Robot.h
 MacroCommande.o : MacroCommande.h Commande.h Invocateur.h Robot.h
 CommandeAvancer.o : CommandeAvancer.h Commande.h Position.h
+CommandeDefmacro.o : CommandeDefmacro.h MacroCommande.h Invocateur.h Robot.h
+CommandeEvaluerObst.o : CommandeEvaluerObst.h Commande.h Invocateur.h Robot.h
+CommandeFiger.o : CommandeFiger.h Commande.h Invocateur.h Robot.h
+CommandePeserObjet.o : CommandePeserObjet.h Commande.h Invocateur.h Robot.h
+CommandePoser.o : CommandePoser.h Commande.h Invocateur.h Robot.h
+CommandeRencontrerObst.o : CommandeRencontrerObst.h Commande.h Invocateur.h Robot.h
+CommandeRepartir.o : CommandeRepartir.h Commande.h Invocateur.h Robot.h
+CommandeSaisir.o : CommandeSaisir.h Commande.h Invocateur.h Robot.h
+CommandeTourner.o : CommandeTourner.h Commande.h Robot.h

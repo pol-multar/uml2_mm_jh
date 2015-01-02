@@ -1,8 +1,9 @@
 #ifndef DEF_MACROCOMMANDE
 #define DEF_MACROCOMMANDE
 
-#include "Commande.h"
 #include <string>
+#include <list>
+#include "Commande.h"
 #include "Invocateur.h"
 #include "Robot.h"
 
@@ -11,8 +12,8 @@ protected:
 	bool sauv = false;
 	Robot* sauvRobot;
 	Invocateur* invocateur;
-	static list<string> commands;
-	static string FIN_MARCO;
+	static std::list<std::string> commands;
+	static std::string FIN_MARCO;
 public:
 	static MacroCommande monExemplaire;
 

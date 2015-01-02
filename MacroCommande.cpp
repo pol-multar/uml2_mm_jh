@@ -1,10 +1,15 @@
 #include "MacroCommande.h"
 #include "Commande.h"
+#include <list>
+#include <string>
 
 using namespace std;
-list<string> commands;
-string FIN_MARCO = "FINMACRO";
+
+list<string> MacroCommande::commands;
+string MacroCommande::FIN_MARCO = "FINMACRO";
+
 MacroCommande::MacroCommande(Invocateur* inv) :invocateur(inv){
+
 };
 
 Commande* MacroCommande::constructeurVirtuel(Invocateur* inv) {
