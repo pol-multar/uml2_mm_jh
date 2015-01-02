@@ -25,21 +25,21 @@ public:
 
     class Commande_Exception : public exception {
     public:
-        virtual const char *exception() const throw() {
+        virtual const char *what() const throw() {
             return "Exception!\n";
         }
     };
 
     class Unknown_Commande_Exception : public Commande_Exception {
     public:
-        virtual const char *exception() const throw() {
+        virtual const char *what() const throw() {
             return "Unknown commande!\n";
         }
     };
 
     class Unvalid_Commande_Exception : public Commande_Exception {
     public:
-        virtual const char *exception() const throw() {
+        virtual const char *what() const throw() {
             return "Unvalid commande!\n";
         }
     };

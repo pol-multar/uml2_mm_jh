@@ -3,8 +3,12 @@
 #include <algorithm>
 void Invocateur::run(string c, Robot* r) {
 	robot = r;
-	commande = commande->nouvelleCommande(c, this);
-	executer();
+	try{
+		commande = commande->nouvelleCommande(c, this);
+		executer();
+	} catch(exception& e) {
+		cerr<<e.what()<<endl;
+	}
 };
 
 void Invocateur::executer() {

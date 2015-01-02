@@ -11,7 +11,7 @@ map<string,Commande*>& Commande::commandesInscrites() {
 Commande* Commande::nouvelleCommande(string c,Invocateur* inv) {
 	if (commandesInscrites().find(c) == commandesInscrites().end())
 	{
-		throw Commande::Unvalid_Commande_Exception();
+		throw Commande::Unknown_Commande_Exception();
 	}
 	return commandesInscrites()[c]->constructeurVirtuel(inv);
 
