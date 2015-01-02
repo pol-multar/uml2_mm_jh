@@ -1,4 +1,5 @@
 #include "Invocateur.h"
+#include "Robot.h"
 #include <algorithm>
 void Invocateur::run(string c, Robot* r) {
 	robot = r;
@@ -33,4 +34,8 @@ string Invocateur::getCommande(){
 	cin >> commande;
 	std::transform(commande.begin(), commande.end(), commande.begin(), ::toupper);
 	return commande;
+}
+
+string Invocateur::statut() {
+	return robot->statut();
 }

@@ -5,7 +5,6 @@
 #include "Observable.h"
 #include <iostream>
 
-using namespace std;
 class Robot;
 class Invocateur : public Observable{
 private:
@@ -13,12 +12,13 @@ private:
 	Robot* robot;
 	void executer();
 public:
-	Invocateur();
+	Invocateur(){};
 	void run(string c, Robot* r);
-	string getCommande();
+	std::string getCommande();
 	int getInt();
-	string getString();
+	std::string getString();
 	Robot* getRobot();
+	std::string statut(void);
 };
 
 

@@ -10,12 +10,29 @@ using namespace std;
 
 
 int main(){
+
+	Plot p1(10);
+	Plot p2(15);
+	Plot p3(20);
+	Objet obj1(10);
+	Objet obj2(20);
+	Objet obj3(30);
+
+	Display display;
+
 	EtatRobot* etatcommencer = EtatRobot::getInit();
 	Robot robot(etatcommencer);
 
+	robot.addObserver(&display);
+
+	Invocateur inv;
+
+	inv.addObserver(&display);
+
 	while (true)
 	{
-		Invocateur inv;
+		MSG("Tapez une commande");
+
 		string commande = inv.getCommande();
 		inv.run(commande, &robot);
 	}
@@ -83,5 +100,6 @@ int main(){
 	cout<<"maintenant je suis dans l'EtatAVideFacePlot."<<endl;
 	robot.tourner("SOUTH");
 	*/
+
 	return 0;
 }

@@ -12,8 +12,8 @@ ALL = tst_Robot
 
 #targets
 
-tst_Robot : main_Robot.o Robot.o EtatAVide.o EtatAVideFacePlot.o EtatEnCharge.o EtatEnChargeFacePlot.o EtatEnRoute.o EtatFige.o EtatRobot.o Objet.o Plot.o Position.o Observable.o IObserver.o Commande.o
-	$(CXX_LINK) -o tst_Robot main_Robot.o Robot.o EtatAVide.o EtatAVideFacePlot.o EtatEnCharge.o EtatEnChargeFacePlot.o EtatEnRoute.o EtatFige.o EtatRobot.o Objet.o Plot.o Position.o Observable.o IObserver.o Commande.o
+tst_Robot : main_Robot.o Robot.o EtatAVide.o EtatAVideFacePlot.o EtatEnCharge.o EtatEnChargeFacePlot.o EtatEnRoute.o EtatFige.o EtatRobot.o Objet.o Plot.o Position.o Observable.o IObserver.o Commande.o Invocateur.o CommandeAvancer.o
+	$(CXX_LINK) -o tst_Robot main_Robot.o Robot.o EtatAVide.o EtatAVideFacePlot.o EtatEnCharge.o EtatEnChargeFacePlot.o EtatEnRoute.o EtatFige.o EtatRobot.o Objet.o Plot.o Position.o Observable.o IObserver.o Commande.o Invocateur.o CommandeAvancer.o
 
 
 #-----------------------------------------------------------------------
@@ -21,7 +21,7 @@ tst_Robot : main_Robot.o Robot.o EtatAVide.o EtatAVideFacePlot.o EtatEnCharge.o 
 #-----------------------------------------------------------------------
 
 Robot.o : Robot.h EtatRobot.h Objet.h Plot.h Position.h IObserver.h Observable.h $(INCL_DIR)/common_defs.h
-main_Robot.o : Robot.h EtatAVide.h EtatAVideFacePlot.h EtatEnCharge.h EtatEnChargeFacePlot.h EtatRobot.h Objet.h Plot.h Position.h $(INCL_DIR)/common_defs.h
+main_Robot.o : Robot.h EtatAVide.h EtatAVideFacePlot.h EtatEnCharge.h EtatEnChargeFacePlot.h EtatRobot.h Objet.h Plot.h Position.h $(INCL_DIR)/common_defs.h Invocateur.h
 Observable.o : IObserver.h Observable.h
 IObserver.o : IObserver.h Observable.h
 EtatAVide.o : EtatAVide.h EtatAVideFacePlot.h
@@ -34,4 +34,8 @@ EtatRobot.o : EtatRobot.h EtatAVide.h
 Objet.o : Objet.h
 Plot.o : Plot.h
 Position.o : Position.h
+Invocateur.o : Invocateur.h Commande.h Observable.h
 Commande.o : Commande.h Invocateur.h
+CommandeAppeler.o : CommandeAppeler.h MacroCommande.h Invocateur.h Robot.h
+MacroCommande.o : MacroCommande.h Commande.h Invocateur.h Robot.h
+CommandeAvancer.o : CommandeAvancer.h Commande.h Position.h
